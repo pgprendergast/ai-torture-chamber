@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   relay:
-    if: github.repository == 'terrafying/ai-torture-chamber'
+    if: github.repository == 'pgprendergast/ai-torture-chamber'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

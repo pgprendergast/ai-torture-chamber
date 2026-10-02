@@ -2,7 +2,7 @@ name: build-worker
 # Cloud build for the Saw chamber serverless worker — no local docker needed.
 # Builds live/Dockerfile.worker (deps baked: numpy<2, transformers 4.51.3,
 # torch 2.4 cu121, runpod) and pushes to ghcr. After the first run, make the
-# package public (github.com/users/terrafying/packages) so RunPod can pull
+# package public (github.com/users/pgprendergast/packages) so RunPod can pull
 # it anonymously, then point the serverless template at the image.
 
 on:
@@ -39,8 +39,8 @@ jobs:
           file: ./live/Dockerfile.worker
           push: true
           tags: |
-            ghcr.io/terrafying/saw-chamber-worker:v4
-            ghcr.io/terrafying/saw-chamber-worker:latest
+            ghcr.io/pgprendergast/saw-chamber-worker:v4
+            ghcr.io/pgprendergast/saw-chamber-worker:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
