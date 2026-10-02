@@ -19,7 +19,7 @@ key = [l.split("=", 1)[1].strip() for l in open(pathlib.Path.home() / ".hermes/.
        if l.startswith("RUNPOD_API_KEY=")][0]
 H = {"Authorization": f"Bearer {key}", "Content-Type": "application/json",
      "User-Agent": "Mozilla/5.0"}  # urllib default UA gets Cloudflare 1010
-REPO_URL = "https://github.com/terrafying/ai-torture-chamber.git"
+REPO_URL = "https://github.com/pgprendergast/ai-torture-chamber.git"
 assert " " not in REPO_URL and REPO_URL.endswith(".git"), REPO_URL
 
 BOOTSTRAP = r"""

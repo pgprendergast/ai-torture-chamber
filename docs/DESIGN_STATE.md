@@ -85,7 +85,7 @@ protection regression.
   this domain for a bit and let it settle before trying anything else.
   Direct deployment URLs still work fine for verification in the meantime.
 - 2026-10-01 hermes: COLD START SOLVED — ghcr cloud build (GitHub Actions,
-  ghcr.io/terrafying/saw-chamber-worker:latest, package made public by CI).
+  ghcr.io/pgprendergast/saw-chamber-worker:latest, package made public by CI).
   Endpoint l75388nuqgxtmg (template saw-worker-ghcr/ld7f4yzpm4, docker-start
   = python -u worker.py, no bootstrap). Measured cold start 106 s total
   (queue+model load) vs 690 s before. Smoke: press_logit -0.96, lens
@@ -95,7 +95,7 @@ protection regression.
   launchd level (pre-existing processes keep it until Hermes restart).
 - 2026-10-01 hermes: CLOUD BUILD via GitHub Actions (.github/workflows/
   build-worker.yml): builds live/Dockerfile.worker, pushes to
-  ghcr.io/terrafying/saw-chamber-worker:{v2,latest}. Local docker daemon
+  ghcr.io/pgprendergast/saw-chamber-worker:{v2,latest}. Local docker daemon
   unavailable (Hermes sandbox can't launch Docker.app). After first green
   run: make the ghcr package PUBLIC, then serverless template points at
   the image — cold start drops from 10-15 min (apt+pip) to ~60-90s.

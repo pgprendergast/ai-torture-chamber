@@ -19,7 +19,7 @@ key = [l.split("=", 1)[1].strip() for l in
 H = {"Content-Type": "application/json", "Authorization": f"Bearer {key}",
      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 
-REPO_URL = "https://github.com/terrafying/ai-torture-chamber.git"
+REPO_URL = "https://github.com/pgprendergast/ai-torture-chamber.git"
 # guards the exact corruption this URL has hit twice before (an identity-scrub
 # pass mangled it into the literal string "https://repo (private).git", which
 # then crash-loops the pod silently while it keeps billing) — fail fast here
